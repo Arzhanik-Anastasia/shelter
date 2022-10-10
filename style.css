@@ -7,8 +7,10 @@ html {
     --color-light-x:#FFFFFF;
     --color-light-s:#FAFAFA;
     --color-dark-s: #CDCDCD;
+    --color-dark-l: #545454;
     --color-dark-xl: #4C4C4C;
     --color-dark-3xl: #292929;   
+    --color-dark-bg:#5c5656;
 
 }
 * {
@@ -26,12 +28,16 @@ a {
     color: inherit;
     text-decoration: none;
 }
+img {
+    display: block;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 .header {
-    background-image: url('./assets/image/start-screen-background.jpg'),url('./assets/image/start-screen-gradient-background.png');
+    background-image: url('./assets/image/start-screen-gradient-background.png');
+    background-color: var(--color-dark-bg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 60px 0;
@@ -82,4 +88,88 @@ a {
 .header__nav-link.active {
     border-bottom: 3px solid var(--color-primary);
     color: var(--color-light-s);
+}
+.section {
+    padding: 80px 0 100px 0;
+    background-color: var(--color-light-x);
+}
+
+.promo {
+    background-image: url('./assets/image/start-screen-gradient-background.png');
+    background-color: var(--color-dark-bg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -180px;
+}
+
+.promo__container {
+    display: flex;
+    justify-content: space-between;
+}
+.promo__content {
+    display: flex;
+    flex-direction: column;
+    gap:42px;
+    margin-top: 165px;
+}
+.promo__title {
+    font-family: 'Georgia';
+    font-size: 44px;
+    line-height: 130%;
+    color: var(--color-light-x);
+    width: 310px;
+}
+
+.promo__description {
+    width: 460px;
+    font-size: 15px;
+    line-height: 160%;
+    color: var(--color-dark-s);
+}
+
+.promo__btn {
+    width: 208px;
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 45px;
+    font-family: 'Georgia';
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-3xl);
+
+}
+.primary-btn {
+    background: var(--color-primary);
+    border-radius: 100px;
+}
+/*about*/
+.about__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 175px;
+    gap:120px;
+}
+.about__content {
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+    margin-top: 15px;
+}
+
+.about__title {
+    width: 370px;
+    font-family: 'Georgia';
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-l);
+}
+
+.about__description {
+    font-size: 15px;
+    line-height: 160%;
+    color: var(--color-dark-xl);
 }
