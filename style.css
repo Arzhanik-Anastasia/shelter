@@ -37,6 +37,17 @@ img {
     max-width: 120rem;
     margin: 0 auto;
 }
+.section {
+    padding: 8rem 0 10rem 0;
+    background-color: var(--color-light-x);
+}
+.section__title {
+    font-family: 'Georgia';
+    font-size: 3.5rem;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-l);
+}
 .header {
     background-image: url('./assets/image/start-screen-gradient-background.png');
     background-color: var(--color-dark-bg);
@@ -91,10 +102,6 @@ img {
     border-bottom: 0.3rem solid var(--color-primary);
     color: var(--color-light-s);
 }
-.section {
-    padding: 8rem 0 10rem 0;
-    background-color: var(--color-light-x);
-}
 
 .promo {
     background-image: url('./assets/image/start-screen-gradient-background.png');
@@ -115,11 +122,11 @@ img {
     margin-top: 16.5rem;
 }
 .promo__title {
+    width: 31rem;
     font-family: 'Georgia';
     font-size: 4.4rem;
     line-height: 130%;
     color: var(--color-light-x);
-    width: 31rem;
 }
 
 .promo__description {
@@ -170,11 +177,6 @@ img {
 
 .about__title {
     width: 37rem;
-    font-family: 'Georgia';
-    font-size: 3.5rem;
-    line-height: 130%;
-    letter-spacing: 0.06em;
-    color: var(--color-dark-l);
 }
 
 .about__description {
@@ -269,4 +271,41 @@ img {
 .pets__btn{
     margin: 0 auto;
     width: 26.1rem;
+}
+/*help*/
+.help {
+    display: flex;
+    flex-direction: column;
+    gap:6rem;
+}
+.help__title {
+    width: 31rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.help__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ /*    padding: 0 17.5rem; */
+    column-gap: 12rem;
+    row-gap: 5.5rem;
+}
+.help__list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 11.3rem;
+}
+.help__list-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.help__list-title {
+    font-family: 'Georgia';
+    font-size: 2rem;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-l);
 }
