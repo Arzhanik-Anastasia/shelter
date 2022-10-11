@@ -40,10 +40,6 @@ img {
 }
 /*header*/
 .header {
-    background-image: url('./../../assets/image/start-screen-gradient-background.png');
-    background-color: var(--color-dark-bg);
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 6rem 0;
 }
 
@@ -227,13 +223,95 @@ img {
     background-image:url('./../../assets/image/footer-icons/icon-marker.svg');
 }
 
+/*modal*/
+.modal__pet {
+    position: fixed;
+    top: 50%;
+    left: -100%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transition: 0.4s linear;
+    overflow: auto;
+    flex-wrap: wrap;
+}
+.modal__pet.active {
+    left: 50%;
+}
+.modal__container{
+    display: flex;
+    gap:3rem;
+    min-height: 50rem;
+    width: 90rem;
+    border-radius: 0.9rem;
+    background: #fafafa;
+
+}
+.pet__info {
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    font-family: 'Georgia';
+    letter-spacing: 0.06em;
+    color: black;
+}
+.pet__image {
+    width: 50rem;
+    height: 50rem;
+}
+.pet__image img {
+    height: 100%;
+    border-top-left-radius: 0.9rem;
+    border-bottom-left-radius: 0.9rem;
+}
+.pet__name {
+    font-size: 3.5rem;
+    line-height: 130%;
+}
+.pet__species {
+    font-size: 2rem;
+    line-height: 115%;
+}
+.pet__description {
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    line-height: 110%;
+}
+.pets__some-list {
+    display: flex;
+    flex-direction: column;
+    gap:0.6rem
+}
+.pets__some-item {
+    position: relative;
+    padding-left: 20px;
+}
+.pets__some-item span {
+    font-weight: 700;
+}
+.pets__some-item::before {
+    content:'';
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 5px;
+    height: 5px;
+    border-radius:50%;
+    background-color:var(--color-primary)
+}
+.modal__close-btn {
+    position: absolute;
+    background-image:url('./../image/close.svg')
+}
 @media (max-width:1279px) {
     .container {
         max-width: 70.8rem;
     }
     .header {
         padding: 3rem 0;
-      /*   background-size:250%; */
+
     }
     .footer {
         padding: 3rem 0;
