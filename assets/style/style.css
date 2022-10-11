@@ -118,6 +118,51 @@ img {
     border: 0.2rem solid #F1CDB3;
 }
 
+.section {
+    padding: 8rem 0 10rem 0;
+    background-color: var(--color-light-x);
+}
+.section__title {
+    font-family: 'Georgia';
+    font-size: 3.5rem;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-l);
+}
+/*petc-card*/
+
+.pets__card-item {
+    height: 43.5rem;
+    width: 27rem;
+    background-color:var(--color-light-s);
+    gap:3.0rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0.9rem;
+    padding-bottom: 3rem;
+}
+.pets__card-item:hover {
+    box-shadow: 0px 2px 35px 14px rgb(13 13 13 / 4%);
+}
+.pets__card-img {
+    width: 27rem;
+    height: 27rem;
+    border-radius: 0.9rem;
+}
+.pets__card-name {
+    font-family: 'Georgia';
+    font-size: 2rem;
+    line-height: 2.3rem;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-l);
+}
+.pets__card-btn {
+    margin: 0 auto;
+}
 /*footer*/
 .footer {
     background-image: url('./../../assets/image/start-screen-gradient-background.png');
@@ -188,6 +233,7 @@ img {
     }
     .header {
         padding: 3rem 0;
+      /*   background-size:250%; */
     }
     .footer {
         padding: 3rem 0;
