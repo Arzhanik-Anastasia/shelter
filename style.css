@@ -1,9 +1,8 @@
-.promo {
+.start-bg {
     background-image: url('./assets/image/start-screen-gradient-background.png');
     background-color: var(--color-dark-bg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -18rem;
 }
 
 .promo__container {
