@@ -98,11 +98,11 @@
 
 .pets__prev-btn {
     background-image: url("./assets/image/prev.svg");
-    left: -105px;
+    left: -10.5rem;
 }
 .pets__next-btn {
     background-image: url("./assets/image/next.svg");
-    right: -105px;
+    right: -10.5rem;
 }
 .pets__btn{
     margin: 0 auto;
@@ -147,7 +147,7 @@
 .donation__container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 3rem;
     padding: 0 14.3rem;
 }
 .donation__container img {
@@ -244,10 +244,10 @@
         width: 58rem;
     }
     .pets__prev-btn {
-        left: -65px;
+        left: -6.5rem;
     }
     .pets__next-btn {
-        right:  -65px;
+        right:  -6.5rem;
     }
 
     .help {
@@ -282,10 +282,6 @@
 }
 
 @media(max-width:767px) {
-    .header__container {
-        justify-content: flex-start;
-        gap:4.3rem;
-    }
     .promo__content {
         margin-bottom: 10.5rem;
     }
