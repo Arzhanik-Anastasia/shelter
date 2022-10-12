@@ -56,7 +56,7 @@
 }
 .pagination__part {
     font-family: 'Georgia';
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 115%;
     display: flex;
     align-items: center;
