@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/style/reset.css" />
     <link rel="stylesheet" href="./assets/style/style.css" />
     <script src="./assets/scripts/index.js" defer></script>
+    <script src="./slider.js" defer type="module"></script>
     <link rel="stylesheet" href="./style.css" />
     <title>Shelter</title>
   </head>
@@ -33,10 +34,10 @@
                   >
                 </li>
                 <li class="header__nav-item">
-                  <a href="#" class="header__nav-link">Help the shelter</a>
+                  <a href="#help" class="header__nav-link">Help the shelter</a>
                 </li>
                 <li class="header__nav-item">
-                  <a href="#" class="header__nav-link">Contacts</a>
+                  <a href="#contacts" class="header__nav-link">Contacts</a>
                 </li>
               </ul>
             </nav>
@@ -97,53 +98,19 @@
             Our friends who <br />
             are looking for a house
           </div>
-          <div class="pets__slider">
-            <ul class="pets__slider-list">
-              <li class="pets__card-item">
-                <img
-                  class="pets__card-img"
-                  src="./assets/image/pets/pets-katrine-2.jpg"
-                  alt="cat-kathrine"
-                />
-                <div class="pets__card-name">Katrine</div>
-                <a class="pets__card-btn secondary-btn button" href="#"
-                  >Learn more</a
-                >
-              </li>
-              <li class="pets__card-item">
-                <img
-                  class="pets__card-img"
-                  src="./assets/image/pets/pets-jennifer.jpg"
-                  alt=""
-                />
-                <div class="pets__card-name">Jennifer</div>
-                <a class="pets__card-btn secondary-btn button" href="#"
-                  >Learn more</a
-                >
-              </li>
-              <li class="pets__card-item">
-                <img
-                  class="pets__card-img"
-                  src="./assets/image/pets/pets-woody.jpg"
-                  alt=""
-                />
-                <div class="pets__card-name">Woody</div>
-                <a class="pets__card-btn btn-secondary button" href="#"
-                  >Learn more</a
-                >
-              </li>
-            </ul>
-            <div class="pets__slider-btn">
-              <button class="pets__prev-btn arrow"></button>
-              <button class="pets__next-btn arrow"></button>
-            </div>
+          <div class="pets__slider-block">
+            <div class="pets__slider"></div>
           </div>
-          <a href="#" class="pets__btn button primary-btn"
-            >Get to know the rest</a
-          >
+          <div class="pets__slider-btn">
+            <button class="pets__prev-btn arrow"></button>
+            <button class="pets__next-btn arrow"></button>
+          </div>
         </div>
+        <a href="#" class="pets__btn button primary-btn"
+          >Get to know the rest</a
+        >
       </section>
-      <section class="section">
+      <section class="section" id="help">
         <div class="container help">
           <h2 class="help__title section__title">
             How you can help <br />
@@ -241,7 +208,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
       <div class="container footer__container">
         <div class="footer__contacts">
           <h4 class="footer__title">For questions and suggestions</h4>

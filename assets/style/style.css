@@ -94,7 +94,7 @@ img {
     display: block;
     color:var(--color-dark-s);
 }
-.header__nav-link.active {
+.header__nav-link:disabled {
     border-bottom: 0.3rem solid var(--color-primary);
     color: var(--color-light-s);
 }
@@ -162,7 +162,7 @@ img {
 
 .pets__card-item {
     height: 43.5rem;
-    min-width: 27rem;
+    width: 27rem;
     background-color:var(--color-light-s);
     gap:3.0rem;
     text-align: center;
@@ -399,7 +399,7 @@ img {
         right: 0px; 
     }
     .header {
-        min-height: 13rem;
+        min-height: 12rem;
     }
     .header__nav {
         position: fixed;
