@@ -94,7 +94,7 @@ img {
     display: block;
     color:var(--color-dark-s);
 }
-.header__nav-link:disabled {
+.header__nav-link.disabled {
     border-bottom: 0.3rem solid var(--color-primary);
     color: var(--color-light-s);
 }
@@ -172,7 +172,7 @@ img {
     align-items: center;
     cursor: pointer;
     border-radius: 0.9rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2.5rem;
 }
 .pets__card-item:hover {
     box-shadow: 0px 2px 35px 14px rgb(13 13 13 / 4%);

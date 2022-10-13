@@ -9,6 +9,9 @@
 .header__nav-link {
     color:var(--color-dark-l)
 }
+.header__nav-link.disabled {
+    color: var(--color-dark-3xl);
+}
 .header__light .header__burger-btn::before, 
 .header__light .header__burger-btn::after, 
 .header__light .header__burger-btn span {
