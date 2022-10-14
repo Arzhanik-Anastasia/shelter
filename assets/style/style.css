@@ -270,7 +270,6 @@ img {
     display: flex;
     align-items: center;
     transition: 0.4s linear;
-    overflow: auto;
     flex-wrap: wrap;
 }
 .modal__pet.active {
@@ -283,7 +282,8 @@ img {
     width: 90rem;
     border-radius: 0.9rem;
     background: #fafafa;
-
+    padding-right: 2rem;
+    position: relative;
 }
 .pet__info {
     display: flex;
@@ -292,36 +292,41 @@ img {
     font-family: 'Georgia';
     letter-spacing: 0.06em;
     color: black;
+    margin-top: 5rem;
 }
 .pet__image {
-    width: 50rem;
-    height: 50rem;
+    min-width: 50rem;
+    min-height: 50rem;
 }
 .pet__image img {
     border-top-left-radius: 0.9rem;
     border-bottom-left-radius: 0.9rem;
+    width: 100%;
+    height: 100%;
 }
 .pet__name {
     font-size: 3.5rem;
     line-height: 130%;
+    letter-spacing: 0.06em;
 }
 .pet__species {
     font-size: 2rem;
     line-height: 115%;
 }
 .pet__description {
-    padding: 1rem 0;
-    font-size: 1.3rem;
+    padding: 3rem 0;
+    font-size: 1.5rem;
     line-height: 110%;
+    letter-spacing: 0.06em;
 }
 .pets__some-list {
     display: flex;
     flex-direction: column;
-    gap:0.6rem
+    gap:1.1rem
 }
 .pets__some-item {
     position: relative;
-    padding-left: 20px;
+    padding-left: 15px;
 }
 .pets__some-item span {
     font-weight: 700;
@@ -330,7 +335,7 @@ img {
     content:'';
     position: absolute;
     left: 0;
-    top: 3px;
+    top: 5px;
     width: 5px;
     height: 5px;
     border-radius:50%;
@@ -338,7 +343,16 @@ img {
 }
 .modal__close-btn {
     position: absolute;
-    background-image:url('./../image/close.svg')
+    width: 52px;
+    height: 52px;
+    background-color:var(--color-primary);
+    top: -5rem;
+    right: -5rem;
+    border-radius: 50%;
+    background-image:url('./../image/close.svg');
+    background-repeat:no-repeat;
+    background-position:center;
+
 }
 .overlay {
     position: absolute;

@@ -1,4 +1,5 @@
 import pets from "./assets/data/pets.json" assert { type: "json" };
+import { openModal } from "./assets/scripts/index.js";
 const prevBtn = document.querySelector(".pets__prev-btn");
 const nextBtn = document.querySelector(".pets__next-btn");
 const sliderContainer = document.querySelector(".pets__slider");
@@ -8,7 +9,7 @@ const createPetsCards = () => {
   const cards = [];
   pets.forEach((item) => {
     const liItem = `
-    <li class="pets__card-item">
+    <li class="pets__card-item" id=${item.id}>
         <img class="pets__card-img" src="${item.image}" alt="${item.name}"/>
         <div class="pets__card-name">${item.name}</div>
         <a class="pets__card-btn secondary-btn button" href="#">Learn more</a
@@ -28,6 +29,10 @@ const createDefaultCardsWrapper = () => {
   const numsArr = [...Array(numberOfCards).keys()];
   wrapper.className = "pets__slider-list";
   numsArr.map((el) => (wrapper.innerHTML += petsCards[el]));
+  wrapper.addEventListener("click", (e) => {
+    const parent = e.target.closest(".pets__card-item");
+    if (parent) openModal(parent.id);
+  });
   return wrapper;
 };
 
@@ -44,6 +49,10 @@ const createRandomCardsWrapper = () => {
   const randNumsArr = randomNums(numberOfCards);
   wrapper.className = "pets__slider-list";
   randNumsArr.map((el) => (wrapper.innerHTML += petsCards[el]));
+  wrapper.addEventListener("click", (e) => {
+    const parent = e.target.closest(".pets__card-item");
+    if (parent) openModal(parent.id);
+  });
   return wrapper;
 };
 
@@ -77,7 +86,6 @@ const blockedButton = (direction) => {
 nextBtn.addEventListener("click", () => {
   nextBtn.disabled = true;
   prevBtn.disabled = true;
-
   sliderContainer.style.transform = `translateX(-${
     document.querySelector(".pets__slider-list").clientWidth
   }px)`;
