@@ -69,3 +69,20 @@ export const openModal = (id) => {
     document.body.style.overflow = "visible";
   });
 };
+
+/*createCards*/
+export const createPetsCards = () => {
+  const cards = [];
+  pets.forEach((item) => {
+    const liItem = `
+    <li class="pets__card-item" id=${item.id}>
+        <img class="pets__card-img" src="${item.image}" alt="${item.name}"/>
+        <div class="pets__card-name">${item.name}</div>
+        <a class="pets__card-btn secondary-btn button" href="#">Learn more</a
+        >
+    </li>
+      `;
+    cards.push(liItem);
+  });
+  return cards;
+};

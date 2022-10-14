@@ -1,25 +1,10 @@
 import pets from "./assets/data/pets.json" assert { type: "json" };
-import { openModal } from "./assets/scripts/index.js";
+import { openModal, createPetsCards } from "./assets/scripts/index.js";
 const prevBtn = document.querySelector(".pets__prev-btn");
 const nextBtn = document.querySelector(".pets__next-btn");
 const sliderContainer = document.querySelector(".pets__slider");
 
 /*создает карточки животных*/
-const createPetsCards = () => {
-  const cards = [];
-  pets.forEach((item) => {
-    const liItem = `
-    <li class="pets__card-item" id=${item.id}>
-        <img class="pets__card-img" src="${item.image}" alt="${item.name}"/>
-        <div class="pets__card-name">${item.name}</div>
-        <a class="pets__card-btn secondary-btn button" href="#">Learn more</a
-        >
-    </li>
-      `;
-    cards.push(liItem);
-  });
-  return cards;
-};
 
 const petsCards = createPetsCards();
 const numberOfCards = 3;
