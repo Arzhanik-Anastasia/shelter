@@ -1,10 +1,8 @@
-import pets from "./assets/data/pets.json" assert { type: "json" };
-import { openModal, createPetsCards } from "./assets/scripts/index.js";
+import pets from "./../../assets/data/pets.json" assert { type: "json" };
+import { openModal, createPetsCards } from "./../../assets/scripts/index.js";
 const prevBtn = document.querySelector(".pets__prev-btn");
 const nextBtn = document.querySelector(".pets__next-btn");
 const sliderContainer = document.querySelector(".pets__slider");
-
-/*создает карточки животных*/
 
 const petsCards = createPetsCards();
 const numberOfCards = 3;

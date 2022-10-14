@@ -1,5 +1,5 @@
 .start-bg {
-    background-image: url('./assets/image/start-screen-gradient-background.png');
+    background-image: url('./../../assets/image/start-screen-gradient-background.png');
     background-color: var(--color-dark-bg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -108,12 +108,12 @@
 }
 
 .pets__prev-btn {
-    background-image: url("./assets/image/prev.svg");
+    background-image: url("./../../assets/image/prev.svg");
     left: 0;
     top: 34.2rem;
 }
 .pets__next-btn {
-    background-image: url("./assets/image/next.svg");
+    background-image: url("./../../assets/image/next.svg");
     right: 0;
     top: 34.2rem;
 }
@@ -193,7 +193,7 @@
     padding: 0 1.5rem;
 }
 .donation__card-img {
-    background-image:url("./assets/image/credit-card.svg");
+    background-image:url("./../../assets/image/credit-card.svg");
     background-position:center;
     background-repeat:no-repeat;
     width: 3rem;

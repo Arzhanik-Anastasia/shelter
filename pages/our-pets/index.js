@@ -1,4 +1,4 @@
-import { createPetsCards } from "./../assets/scripts/index.js";
+import { createPetsCards } from "../../assets/scripts/index.js";
 const firstBtn = document.querySelector(".pagination-first");
 const lastBtn = document.querySelector(".pagination-last");
 const prevBtn = document.querySelector(".pagination-prev");
@@ -25,6 +25,7 @@ nextBtn.addEventListener("click", () => {
     nextBtn.disabled = false;
   }
   numberPage.textContent = page;
+  changePage();
 });
 
 prevBtn.addEventListener("click", () => {
@@ -38,6 +39,7 @@ prevBtn.addEventListener("click", () => {
     prevBtn.disabled = false;
   }
   numberPage.textContent = page;
+  changePage();
 });
 
 firstBtn.addEventListener("click", () => {
@@ -47,6 +49,7 @@ firstBtn.addEventListener("click", () => {
   firstBtn.disabled = true;
   nextBtn.disabled = false;
   lastBtn.disabled = false;
+  changePage();
 });
 
 lastBtn.addEventListener("click", () => {
@@ -56,4 +59,5 @@ lastBtn.addEventListener("click", () => {
   lastBtn.disabled = true;
   prevBtn.disabled = false;
   firstBtn.disabled = false;
+  changePage();
 });
