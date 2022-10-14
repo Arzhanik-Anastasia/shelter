@@ -1,19 +1,34 @@
-import { createPetsCards } from "../../assets/scripts/index.js";
+import {
+  createPetsCards,
+  randomNums,
+  openModal,
+} from "../../assets/scripts/index.js";
 const firstBtn = document.querySelector(".pagination-first");
 const lastBtn = document.querySelector(".pagination-last");
 const prevBtn = document.querySelector(".pagination-prev");
 const nextBtn = document.querySelector(".pagination-next");
 const numberPage = document.querySelector(".pagination__part");
-const containerCards = document.querySelector(".pets__slider");
+const containerCards = document.querySelector(".pets__wrapper");
 //countAllPage = pets.lenght / coutn pet to page
 const countAllPage = 8;
 let page = 1;
+const pets = createPetsCards();
 
-const changePage = () => {
-  containerCards.innerHTML = createPetsCards();
+const createNewRandomPage = () => {
+  const wrapper = document.createElement("ul");
+  const randNumsArr = randomNums(countAllPage, pets);
+  wrapper.className = "pets__slider";
+  randNumsArr.map((el) => (wrapper.innerHTML += pets[el]));
+  wrapper.addEventListener("click", (e) => {
+    const parent = e.target.closest(".pets__card-item");
+    if (parent) openModal(parent.id);
+  });
+  return wrapper;
 };
 
-changePage();
+containerCards.append(createNewRandomPage());
+
+/* createNewRandomPage(); */
 nextBtn.addEventListener("click", () => {
   page++;
   prevBtn.disabled = false;
@@ -25,7 +40,8 @@ nextBtn.addEventListener("click", () => {
     nextBtn.disabled = false;
   }
   numberPage.textContent = page;
-  changePage();
+  containerCards.innerHTML = "";
+  containerCards.append(createNewRandomPage());
 });
 
 prevBtn.addEventListener("click", () => {
@@ -39,7 +55,8 @@ prevBtn.addEventListener("click", () => {
     prevBtn.disabled = false;
   }
   numberPage.textContent = page;
-  changePage();
+  containerCards.innerHTML = "";
+  containerCards.append(createNewRandomPage());
 });
 
 firstBtn.addEventListener("click", () => {
@@ -49,7 +66,8 @@ firstBtn.addEventListener("click", () => {
   firstBtn.disabled = true;
   nextBtn.disabled = false;
   lastBtn.disabled = false;
-  changePage();
+  containerCards.innerHTML = "";
+  containerCards.append(createNewRandomPage());
 });
 
 lastBtn.addEventListener("click", () => {
@@ -59,5 +77,6 @@ lastBtn.addEventListener("click", () => {
   lastBtn.disabled = true;
   prevBtn.disabled = false;
   firstBtn.disabled = false;
-  changePage();
+  containerCards.innerHTML = "";
+  containerCards.append(createNewRandomPage());
 });

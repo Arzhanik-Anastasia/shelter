@@ -86,3 +86,12 @@ export const createPetsCards = () => {
   });
   return cards;
 };
+
+/*utils*/
+export const randomNums = (numOfCards, count) => {
+  const nums = new Set();
+  while (nums.size !== numOfCards) {
+    nums.add(Math.floor(Math.random() * count.length));
+  }
+  return [...nums];
+};

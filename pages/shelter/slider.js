@@ -1,5 +1,9 @@
 import pets from "./../../assets/data/pets.json" assert { type: "json" };
-import { openModal, createPetsCards } from "./../../assets/scripts/index.js";
+import {
+  openModal,
+  createPetsCards,
+  randomNums,
+} from "./../../assets/scripts/index.js";
 const prevBtn = document.querySelector(".pets__prev-btn");
 const nextBtn = document.querySelector(".pets__next-btn");
 const sliderContainer = document.querySelector(".pets__slider");
@@ -19,17 +23,9 @@ const createDefaultCardsWrapper = () => {
   return wrapper;
 };
 
-const randomNums = (numOfCards) => {
-  const nums = new Set();
-  while (nums.size !== numOfCards) {
-    nums.add(Math.floor(Math.random() * pets.length));
-  }
-  return [...nums];
-};
-
 const createRandomCardsWrapper = () => {
   const wrapper = document.createElement("ul");
-  const randNumsArr = randomNums(numberOfCards);
+  const randNumsArr = randomNums(numberOfCards, pets);
   wrapper.className = "pets__slider-list";
   randNumsArr.map((el) => (wrapper.innerHTML += petsCards[el]));
   wrapper.addEventListener("click", (e) => {
