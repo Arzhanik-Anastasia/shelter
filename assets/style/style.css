@@ -326,7 +326,8 @@ img {
 }
 .pets__some-item {
     position: relative;
-    padding-left: 15px;
+    padding-left: 1.5rem;
+    letter-spacing: 0.06rem;
 }
 .pets__some-item span {
     font-weight: 700;
@@ -336,8 +337,8 @@ img {
     position: absolute;
     left: 0;
     top: 5px;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     border-radius:50%;
     background-color:var(--color-primary)
 }
@@ -390,6 +391,28 @@ img {
     }
     .footer__title {
         margin: 0;
+    }
+
+    .modal__container{
+        min-height: 35rem;
+        width: 63rem;
+        gap:1.3rem;
+        padding-right: 0.5rem;
+    }
+    .pet__info {
+        margin-top: 1rem;
+    }
+    .pet__image {
+        min-width: 35rem;
+        min-height: 35rem;
+    }
+
+    .pet__description {
+        padding:1rem 0; 
+        font-size: 1.3rem;
+    }
+    .pets__some-list {
+        gap:0.6rem
     }
 }
 
@@ -473,6 +496,21 @@ img {
     .footer__image {
         width: 260px;
         height: 269px;
+    }
+
+
+
+
+    .modal__container{
+        min-height: 34rem;
+        width: 24rem;
+        padding: 1rem;
+    }
+    .pet__info {
+        margin-top: 0;
+    }
+    .pet__image {
+        display: none;
     }
 }
 
