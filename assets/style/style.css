@@ -352,6 +352,7 @@ img {
     background-image:url('./../image/close.svg');
     background-repeat:no-repeat;
     background-position:center;
+    cursor: pointer;
 
 }
 .overlay {
